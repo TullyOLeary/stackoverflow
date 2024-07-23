@@ -48,12 +48,20 @@ def find_optimal_lm_mod(X, y, cutoffs, test_size = .30, random_state=42, plot=Tr
     '''
     INPUT
     X - pandas dataframe, X matrix
-    y - pandas dataframe, response variable
-    cutoffs - list of ints, cutoff for number of non-zero values in dummy categorical vars
-    test_size - float between 0 and 1, default 0.3, determines the proportion of data as test data
-    random_state - int, default 42, controls random state for train_test_split
-    plot - boolean, default 0.3, True to plot result
+    y - pandas DataFrame
+        - The response variable.
+      - cutoffs: list of ints
+        - Cutoff values for the number of non-zero values in dummy categorical variables.
 
+      - test_size: float, default 0.3
+        - A value between 0 and 1 that determines the proportion of data to be used as test data.
+
+      - random_state: int, default 42
+        - A value that controls the random state for the train_test_split function.
+
+      - plot: boolean, default False
+        - If True, the result will be plotted.
+  
     OUTPUT
     r2_scores_test - list of floats of r2 scores on the test data
     r2_scores_train - list of floats of r2 scores on the train data
